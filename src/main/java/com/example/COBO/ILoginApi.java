@@ -28,7 +28,22 @@ public interface ILoginApi {
                     @Content(mediaType = "application/json",
                             schema = @Schema(implementation = ErrorResponse.class))
                 }
+            ),
+            @ApiResponse(
+                responseCode = "400", description = "Bad Request",
+                content = {
+                    @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ErrorResponse.class))
+                }
+            ),
+            @ApiResponse(
+                responseCode = "500", description = "Internal Server Error",
+                content = {
+                    @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ErrorResponse.class))
+                }
             )
+        
         }
     )
     public ResponseEntity<LoginResponse> login(LoginRequest request);
