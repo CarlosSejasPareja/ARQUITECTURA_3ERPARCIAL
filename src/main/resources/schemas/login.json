@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 50,
+        "message": "El nombre de usuario debe tener entre 3 y 50 caracteres"
+      },
+      "password": {
+        "type": "string",
+        "minLength": 6,
+        "message": "La contraseña debe tener al menos 6 caracteres"
+      }
+    },
+    "required": ["username", "password"]
+  }
+  
